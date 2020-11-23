@@ -3,13 +3,14 @@
 <h3 style="text-align:right">Limeira, 22 de Novembro de 2020</h3>
 
 # Fullstack Teste
-Olá, somos a Piuma Soluções em tecnologia, somos especialistas em tecnologia personalizada para novos negócios. Este é o Teste para desenvolvedores fullstack. Após concluir o teste, favor enviar um pull requeste neste repositório seguindo as recomendações abaixo. Agradecemos o empenho e esperamos poder incluir seu talento à nossas equipes.
+Olá, somos a Piuma Soluções em tecnologia, somos especialistas em tecnologia personalizada para novos negócios. 
+Este é o nosso Teste para desenvolvedores fullstack. Após concluir o teste, favor enviar um pull request neste repositório seguindo as recomendações. Agradecemos o empenho e esperamos poder incluir seu talento às nossas equipes.
 
 <br>
 
 ### Conteúdo
 ---
-O teste contempla habilidades básicas necessárias para o cargo de desenvolvedor fullstack, com ênfase à integração entre APIs, desenvolvimento de interfaces frontend e git básico.
+O teste contempla habilidades necessárias para o cargo de desenvolvedor fullstack, com ênfase à integração entre APIs, desenvolvimento de interfaces frontend e git.
 
 
 <br>
@@ -19,25 +20,23 @@ O teste contempla habilidades básicas necessárias para o cargo de desenvolvedo
 
 Atenção: 
   - Todos os passos do desafio são obrigatórios
-  - Todos links para apis externas, documentações dos frameworks a serem utilizados e outras informações importantes serão listadas neste documento
+  - Todos os links para apis externas, documentações dos frameworks a serem utilizados e outras informações importantes estão listadas neste documento
 
 ---  
 
 Overview do desafio:
 
   O sistema servirá para controle de clientes. O sistema deve exibir uma listagem de clientes cadastrados e permitir:
-  - Listagem de todos os clientes com paginação
+  - Listagem de todos os clientes com paginação e ordenação por ordem alfabética no campo nome
   - Busca de clientes por nome, id, apelido ou documento
-  - Exclusão definitiva de um cliente
-  - Inativação de um cliente
+  - Exclusão de um cliente informando o id
   - Cadastro de um novo cliente
   - Alteração de um cliente já cadastrado
-
 
 Regras: 
   - Clientes do tipo "pessoa física" devem informar o CPF como documento
   - Clientes do tipo "pessoa jurídica" devem informar o CNPJ como documento
-  - Para cliente do tipo "pessoa jurídica" o sistema deve buscar as informações da empresa pelo documento informado no webservice da receita federal.
+  - Para clientes do tipo "pessoa jurídica" o sistema deve buscar as informações da empresa pelo documento informado no webservice da receita federal (listado neste documento).
   - Sempre que o campo precisar de máscara, o front deve aplicar máscara.
   - A API deve tratar os campos que tem máscara, gravando somente os números.
 
@@ -47,7 +46,7 @@ Regras:
 ---
 
   1. Dados
-     - Os dados devem ser armazendaos em um arquivo .json no diretório "database" no diretório raiz do projeto
+     - Os dados devem ser armazenados em um arquivo "client.json" no diretório "database" no diretório raiz do projeto
      - Objeto cliente:
        - id: gerado automaticamente com Math.floor(Math.random() * 100) + Date.now()
        - nome: Utilizado para salvar tanto nome quanto razão social
@@ -56,27 +55,27 @@ Regras:
 
   2. API:
       - Criar a API utilizando NodeJS ( versão LTS vigente ), Fastify e Axios 
+      
       - A API será responsável por entregar endpoints para:
-        -  Listagem de todos os clientes com paginação
+        - Listagem de todos os clientes com paginação e ordenação por ordem alfabética no campo nome
         - Busca de clientes por nome, id, apelido ou documento
         - Exclusão definitiva de um cliente
-        - Inativação de um cliente
         - Cadastro de um novo cliente
         - Alteração de um cliente já cadastrado
 
   3. Frontend
       - Criar o projeto de frontend utilizando VueJS e Quasar Framework
       
-      - Implementar ao menos duas páginas, sendo uma para a tabela com a listagem e filtros e outra para edição e inclusão de novos clientes. A tela para edição e inclusão de novos clientes também pode ser desenvolvida como dialog.
+      - Implementar a listagem e o formulário de inclusão/alteração separadamente, podendo ser duas páginas distintas ou uma página para a listagem e um dialog para edição e inclusão de clientes.
       
       - O projeto deve ser responsivo, componentes que não se adaptem bem ao mobile podem ser substituídos.
   
   4. Diferenciais
         - Cuidados com a experiência do usuário nos ambientes desktop e mobile serão pontuados.
         
-        - Cuidados com a aparência da aplicação também será mais valorizada, como por exemplo cores, na aplicação, nomes, imagens...
+        - Cuidados com a aparência da aplicação também será mais valorizada, como por exemplo logotipo e cores na aplicação, nomes, imagens...
         
-        - Código bem escrito, com reutilização de código, princípios de SOLID, clean code e programação funcional serão melhores avaliados. Lembre-se de que não é porque funciona que está correto.
+        - Código bem escrito, com reutilização de código, princípios de S.O.L.I.D, clean code e programação funcional serão avaliados positivamente. Lembre-se de que não é porque funciona que está correto.
         
 <br>
 
